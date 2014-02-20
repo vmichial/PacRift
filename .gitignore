@@ -11,3 +11,6 @@
 # Custom Ignores
 *.db
 *.meta
+
+# this makes it so it doesnt make our user prefs change 24/7
+.userprefs
