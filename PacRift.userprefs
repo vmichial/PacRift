@@ -1,7 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Maps\MapGen.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Maps\PRM_Custom1.txt">
     <Files>
+      <File FileName="Assets\Maps\PRM_Custom1.txt" Line="1" Column="1" />
       <File FileName="Assets\Maps\MapGen.cs" Line="16" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>

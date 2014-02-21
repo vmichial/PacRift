@@ -14,12 +14,21 @@ Currently the extension will be TXT, but I think we should make a custom extensi
 
 { #Map Begin
 
-cubeA 1;1;1;
-cubeB 100;100;100;
-
-#This is a comment
-/# This is a 	
+	cubeA 1;1;1;
+	cubeB 100;100;100;
+	
+	#This is a comment
+	/# This is a 	
 	Block Comment #\
+	spawnG 25;25;25; #Must have 4 Ghost spawns and 1-3 Pac spawns
+	& |;|;|; # the & repeats the last prefab name and the | repeats the last coordinates (X, Y and Z are saved)
+	& |;|;|;
+	& |;|;|;
+	
+	spawnP 50;50;50;
+	& |;|;|;
+	& |;|;|;
+
 
 
 } #Map End
