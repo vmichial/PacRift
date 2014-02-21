@@ -13,8 +13,8 @@ Below is the test map. Modify with real values, so we can actually test it.
 Currently the extension will be TXT, but I think we should make a custom extension because its cooler. like filename.DJPCMASTA or something.
 
 { #Map Begin
-
-	cubeA 1;1;1;
+	@Custom Map 1@ #text surrounded by @ symbols is the map name. should only appear once in the code, but if it appears more than once, will use the last instance as the name. Can be alpha-numeric. 
+	cubeA 1;1;1; # Hopefully a list of actual available prefab names will be included with the binary package, so people can make their own maps
 	cubeB 100;100;100;
 	
 	#This is a comment
