@@ -14,8 +14,9 @@ public class MapGen : MonoBehaviour { //pre-generated class
 		
 		string input;
 		System.IO.StreamReader ss = mapFile as StreamReader;
-		input = ss.ReadLine();
-		Debug.Log(input);
+		while((input = ss.ReadLine()) != null) {
+			Debug.Log(input);	 
+		}
 		//see PRM_Custom1.txt (in the same dir as this file) for the map file syntax...
 
 		return; //returns nothing caz void.
@@ -35,7 +36,7 @@ public class MapGen : MonoBehaviour { //pre-generated class
 
 	// Use this for initialization
 	void Start () {
-		fname = "PRM_Custom1.txt"; //file name, but I want this to not be built into the exe in the future. How do?
+		fname = "Assets\\Maps\\PRM_Custom1.txt"; //file name, but I want this to not be built into the exe in the future. How do?
 		file = new StreamReader(fname);
 		//file = new FileStream(fname, FileMode.Open, FileAccess.Read); //is this correct? I sm trying to open a file (obv).
 		CreateMap(file);
