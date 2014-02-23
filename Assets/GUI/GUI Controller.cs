@@ -1,6 +1,8 @@
 /*
  * This program implements a GUIcontroller. The GUI controller
  * will allow for a 3D menu system
+ * 
+ * i write this code
  *
  */
 
@@ -13,19 +15,44 @@ enum Type{
 	Check, Radio, Button, LineEdit, Frame, Text, BG, TextBox
 };
 
+enum Length{
+	Full, Half, Quarter
+};
+
+public class Letter{
+
+}
+
+public class Block{
+	private Length L;
+	public bool inUse;
+	public GameObject owner;
+	public GameObject me;
+
+	public Block(Length l){
+		L = l;
+	}
+
+
+}
+
 //GUIs are made up of objects like buttons and line Edits.
 //This is done with a parent child system. Each object will
 //be positioned based on the location of it's parent if it has one.
 //it only needs to know how many of each block it needs, then you 
 //would redefine the functions necessary
 public abstract class GUI_Obj{
-	private Type type;
-	private GUI_Obj parent;
-	public GUI_Obj[] children;
+	public bool active;		//active signals existing or not
+	public bool selected;	//is it selected
+	private Type type;		//type of gui element
+	private GUI_Obj parent;	//who am i a child of
+	public GUI_Obj [] children;	//who are my children
 
-	public int numFull;
-	public int numHalf;
-	public int numQuarter;
+	public int numFull;		//num of large blocks
+	public int numHalf;		//num of half blocks
+	public int numQuarter;	//num of quarter blocks
+
+
 }
 
 //the frame exists to make all of the elements inside be 
