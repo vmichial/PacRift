@@ -1,13 +1,32 @@
-﻿/*
+/*
  * This program implements a GUIcontroller. The GUI controller
- * will allow for a 3D menu system 
+ * will allow for a 3D menu system
  *
  */
 
 using UnityEngine;
 using System.Collections;
 
+/*The Type enumerator just allows us to do easy type checks for GUIS
+ */
+enum Type{
+	Check, Radio, Button, LineEdit, Frame, Text, BG, TextBox
+};
 
+//GUIs are made up of objects like buttons and line Edits.
+//This is done with a parent child system. Each object will
+//be positioned based on the location of it's parent if it has one.
+//it only needs to know how many of each block it needs, then you 
+//would redefine the functions necessary
+public abstract class GUI_Obj{
+	private Type type;
+	private GUI_Obj parent;
+	public GUI_Obj[] children;
+
+	public int numFull;
+	public int numHalf;
+	public int numQuarter;
+}
 
 //the frame exists to make all of the elements inside be 
 //contained within itself, nd be operated on relative to itself
