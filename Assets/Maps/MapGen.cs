@@ -10,8 +10,12 @@ public class MapGen : MonoBehaviour { //pre-generated class
 		return true;
 	}
 
-	void CreateMap (FileStream fs) { //this will generate the map. will call PlaceBlocks every time it needs to. 
-
+	public void CreateMap (StreamReader mapFile) { //this will generate the map. will call PlaceBlocks every time it needs to. 
+		
+		string input;
+		System.IO.StreamReader ss = mapFile as StreamReader;
+		input = ss.ReadLine();
+		Debug.Log(input);
 		//see PRM_Custom1.txt (in the same dir as this file) for the map file syntax...
 
 		return; //returns nothing caz void.
@@ -27,15 +31,16 @@ public class MapGen : MonoBehaviour { //pre-generated class
 	*/
 
 	string fname;
-	FileStream file;
+	System.IO.StreamReader file;
 
 	// Use this for initialization
 	void Start () {
 		fname = "PRM_Custom1.txt"; //file name, but I want this to not be built into the exe in the future. How do?
-		file = new FileStream(fname, FileMode.Open, FileAccess.Read); //is this correct? I sm trying to open a file (obv).
+		file = new StreamReader(fname);
+		//file = new FileStream(fname, FileMode.Open, FileAccess.Read); //is this correct? I sm trying to open a file (obv).
+		CreateMap(file);
 
 		return;
-
 	}
 	
 	// Update is called once per frame
