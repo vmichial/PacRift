@@ -4,6 +4,23 @@ using System.IO; //for files and stuff
 
 public class MapGen : MonoBehaviour { //pre-generated class
 
+	/* Globals: 
+	 * should just be the file stream and file path(s). 
+	 * Only has one file path for now, 
+	 * but I was thinking of having all the 
+	 * maps we make included in the exe, 
+	 * and then 2 or 3 customizable maps
+	 * that users can edit.
+	*/
+	
+	string fname;
+	System.IO.StreamReader file;
+	
+	string FindToken(string target, string input) {
+
+
+	}
+
 	//this will place the blocks/prefabs for the generator.
 	bool PlaceBlocks (GameObject prefab) {
 		//if placed correctly (no issue finding the prefab, numbers are valid, etc.) this will return true.
@@ -15,24 +32,17 @@ public class MapGen : MonoBehaviour { //pre-generated class
 		string input;
 		System.IO.StreamReader ss = mapFile as StreamReader;
 		while((input = ss.ReadLine()) != null) {
-			Debug.Log(input);	 
+			Debug.Log(input);
+			
 		}
 		//see PRM_Custom1.txt (in the same dir as this file) for the map file syntax...
 
 		return; //returns nothing caz void.
 	}
 
-	/* Globals: 
-	 * should just be the file stream and file path(s). 
-	 * Only has one file path for now, 
-	 * but I was thinking of having all the 
-	 * maps we make included in the exe, 
-	 * and then 2 or 3 customizable maps
-	 * that users can edit.
-	*/
 
-	string fname;
-	System.IO.StreamReader file;
+
+
 
 	// Use this for initialization
 	void Start () {
