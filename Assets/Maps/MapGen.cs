@@ -18,7 +18,7 @@ public class MapGen : MonoBehaviour { //pre-generated class
 	int checkToken = -1;
 
 	//this will place the blocks/prefabs for the generator.
-	bool PlaceBlocks (GameObject prefab, double x, double y, double z) {
+	bool PlaceBlocks (string prefab, float x, float y, float z) {
 		GameObject block = (GameObject)Instantiate(Resources.Load(prefab)); //Apparently returns 'null' if no prefab of that name/path exists.
 		if (block == null) { 
 			Debug.LogError("Error: Prefab name is invalid. Prefab not found.");
