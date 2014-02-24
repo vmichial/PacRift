@@ -29,9 +29,9 @@ public class Block{
 	public GameObject owner;
 	public GameObject me;
 
-	public Block(Length l){
-		L = l;
-	}
+//	public Block(Length l){
+//		L = l;
+//	}
 
 
 }
