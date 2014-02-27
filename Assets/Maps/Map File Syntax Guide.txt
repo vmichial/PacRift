@@ -1,0 +1,17 @@
+{ and } = used to enclose a map file. Everything outside, these braces are ignored.
+
+# = Comment: completely ignored
+/# and #\ = Block comment: completely ignored.
+@ = Map name command. Text surrounded by @'s will be set as the name of the map. Only the last instance of this command will be used.
+
+Syntax for placing an object: 
+
+prefabName: (x);(y);(z); (%degreesToRotate)(x/y/z)
+
+x, y and z are floating point numbers, while degreesToRotate is an integer between ±0 and ±359. 
+Anything above/below ±359 will be rounded down to ±359. 
+If not specified, axis rotated on will be X.
+prefabName must be one of the included prefabs in the game (in the future these names will be listed in a file).
+
+Replacing prefabName with & will place a duplicate of the previous object. Replacing any position value with | will duplicate the last entry of that type (x, y or z).
+

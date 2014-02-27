@@ -1,13 +1,5 @@
 This is a test file.
 
-Everything before the open curly brace is ignored. 
-
-# = comment. /# and #\ are for block comments.
-
-Format for objects: prefabName x;y;z;
-
-White-space will be ignored.
-Closing curly brace ends the map. everything after it is ignored as well.
 Below is the test map. Modify with real values, so we can actually test it.
 
 Currently the extension will be TXT, but I think we should make a custom extension because its cooler. like filename.DJPCMASTA or something.
@@ -16,7 +8,7 @@ Currently the extension will be TXT, but I think we should make a custom extensi
 	@Custom Map 1@ #text surrounded by @ symbols is the map name. should only appear once in the code, but if it appears more than once, will use the last instance as the name. Can be alpha-numeric. 
 	cubeA: 1;1;1; # Hopefully a list of actual available prefab names will be included with the binary package, so people can make their own maps
 	cubeB: 100;100;100;
-	cubeC: 75;75;75;
+	cubeC: 75;75;75; %25x
 	
 	#This is a comment
 	/# This is a 	
