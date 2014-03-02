@@ -58,8 +58,6 @@ public abstract class GUI_Obj{
 	public int numFull;		//num of large blocks
 	public int numHalf;		//num of half blocks
 	public int numQuarter;	//num of quarter blocks
-
-
 }
 
 //the frame exists to make all of the elements inside be 
