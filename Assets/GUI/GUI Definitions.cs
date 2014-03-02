@@ -15,7 +15,7 @@ enum Type{
 	Check, Radio, Button, LineEdit, Frame, Text, BG, TextBox
 };
 
-enum Length{
+public enum Length{
 	Full, Half, Quarter
 };
 
@@ -24,14 +24,21 @@ public class Letter{
 }
 
 public class Block{
-	private Length L;
+	public Length L;
 	public bool inUse;
 	public GameObject owner;
 	public GameObject me;
 
-//	public Block(Length l){
-//		L = l;
-//	}
+	public Block(Length l,GameObject Parent){
+		L = l;
+		inUse=false;
+		owner = Parent;
+		me = new GameObject();
+		me.AddComponent("MeshFilter");
+		me.AddComponent("BoxCollider");
+		me.AddComponent("MeshRenderer");
+		me.AddComponent("Rigidbody");
+	}
 
 
 }
@@ -67,17 +74,4 @@ public class GUI_Frame{
 	public int sides;
 	public int numL;
 
-}
-
-public class GUIController : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
