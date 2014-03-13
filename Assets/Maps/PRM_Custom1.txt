@@ -11,8 +11,7 @@ Currently the extension will be TXT, but I think we should make a custom extensi
 	cubeC: 75;75;75; %25x
 	
 	#This is a comment
-	/# This is a 	
-	Block Comment #\
+	
 	spawnG: 25;25;25; #Must have 4 Ghost spawns and 1-3 Pac spawns
 	& |;|;|; # the & repeats the last prefab name and the | repeats the last coordinates (X, Y and Z are saved)
 	& |;|;|;
@@ -21,7 +20,4 @@ Currently the extension will be TXT, but I think we should make a custom extensi
 	spawnP: 50;50;50;
 	& |;|;|;
 	& |;|;|;
-
-
-
 } #Map End

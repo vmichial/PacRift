@@ -1,7 +1,6 @@
 { and } = used to enclose a map file. Everything outside, these braces are ignored.
 
 # = Comment: completely ignored
-/# and #\ = Block comment: completely ignored.
 @ = Map name command. Text surrounded by @'s will be set as the name of the map. Only the last instance of this command will be used.
 
 Syntax for placing an object: 
